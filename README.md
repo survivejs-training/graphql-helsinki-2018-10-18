@@ -4,7 +4,18 @@
 
 ## Goals
 
-* TODO
+* What's GraphQL?
+* How GraphQL can make my life easier as a frontend developer?
+* How to introduce GraphQL to other developers?
+* How does GraphQL compare to REST?
+* Learn more about GraphQL esp. in terms of GraphQL stitching and how to improve performance.
+* How to implement a GraphQL layer in front of an existing layer?
+* How GraphQL can make my life easier compared to REST?
+* How to interface with an existing dataset?
+* How to migrate from older APIs to GraphQL?
+* What's the performance of GraphQL compared to REST?
+* How to migrate from Redux to Apollo or other options?
+* How to convince team to use GraphQL?
 
 ## Schedule
 
