@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "graphpack",
-    "build": "graphpack build"
+    "build": "graphpack build",
+    "format": "prettier --write \"**/*.{js,css,md}\"",
+    "posttest": "npm run format"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "graphpack": "^1.0.0-alpha.3"
+    "graphpack": "^1.0.0-alpha.3",
+    "prettier": "^1.14.3"
   }
 }
