@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+// TODO: Extract state and logic so it's testable
 const DATA_PATH = path.join(__dirname, "./data.json");
 let helloState = loadData(DATA_PATH, "world!");
 
@@ -31,4 +32,4 @@ function saveData(dataPath, data) {
 	fs.writeFileSync(dataPath, data);
 }
 
-export default resolvers;
+module.exports = resolvers;
