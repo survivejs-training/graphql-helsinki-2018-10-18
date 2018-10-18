@@ -7,13 +7,22 @@
     "start": "graphpack",
     "build": "graphpack build",
     "format": "prettier --write \"**/*.{js,css,md}\"",
-    "posttest": "npm run format"
+    "posttest": "npm run format",
+    "precommit": "lint-staged"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "graphpack": "^1.0.0-alpha.3",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
