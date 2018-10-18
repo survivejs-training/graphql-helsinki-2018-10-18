@@ -1,35 +1,8 @@
-const fs = require("fs");
 const path = require("path");
+const resolvers = require("./_resolvers");
+const fsConnector = require("./fsConnector");
 
 // TODO: Extract state and logic so it's testable
 const DATA_PATH = path.join(__dirname, "./data.json");
-let helloState = loadData(DATA_PATH, "world!");
 
-const resolvers = {
-	Mutation: {
-		changeHello: (_, { newHello }) => {
-			helloState = newHello;
-
-			saveData(DATA_PATH, helloState);
-
-			return helloState;
-		}
-	},
-	Query: {
-		hello: () => helloState
-	}
-};
-
-function loadData(dataPath, initialData) {
-	if (fs.existsSync(dataPath)) {
-		return fs.readFileSync(dataPath, "utf8");
-	}
-
-	return initialData;
-}
-
-function saveData(dataPath, data) {
-	fs.writeFileSync(dataPath, data);
-}
-
-module.exports = resolvers;
+module.exports = resolvers(fsConnector(DATA_PATH, { hello: "world!" }));
