@@ -1,13 +1,16 @@
+let helloState = 'world!'
+
+
 const resolvers = {
   Mutation: {
     changeHello: (_, { newHello }) => {
-      console.log(newHello);
+      helloState = newHello
 
-      return 'foobar'
+      return helloState
     }
   },
   Query: {
-    hello: () => 'world!',
+    hello: () => helloState
   },
 };
 
