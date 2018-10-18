@@ -1,6 +1,5 @@
 let helloState = 'world!'
 
-
 const resolvers = {
   Mutation: {
     changeHello: (_, { newHello }) => {
