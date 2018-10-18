@@ -1,7 +1,9 @@
 type Mutation {
-  changeHello(newHello: String!): String
+	changeHello(newHello: String!): String
+	uploadImage(newImage: String): String
 }
 
 type Query {
-  hello: String
+	hello: String
+	image: String # base64
 }
