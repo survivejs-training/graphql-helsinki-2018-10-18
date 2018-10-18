@@ -1,38 +1,38 @@
 {
-  "name": "graphql-demo",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "graphpack",
-    "build": "graphpack build",
-    "format": "prettier --write \"**/*.{js,css,md}\"",
-    "posttest": "npm run format",
-    "precommit": "lint-staged",
-    "test:jest": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "test": "npm run test:jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "graphpack": "^1.0.0-alpha.3",
-    "graphql": "^14.0.2",
-    "graphql-import": "^0.7.1",
-    "husky": "^1.1.2",
-    "jest": "^23.6.0",
-    "lint-staged": "^7.3.0",
-    "prettier": "^1.14.3"
-  },
-  "lint-staged": {
-    "*.{js,css,md}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "dependencies": {
-    "graphql-tools": "^4.0.2"
-  }
+	"name": "graphql-demo",
+	"version": "0.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "graphpack",
+		"build": "graphpack build",
+		"format": "prettier --write \"**/*.{js,css,md}\"",
+		"posttest": "npm run format",
+		"precommit": "lint-staged",
+		"test:jest": "jest --coverage",
+		"test:watch": "jest --coverage --watch",
+		"test:coverage": "jest --coverage",
+		"test": "npm run test:jest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"graphpack": "^1.0.0-alpha.3",
+		"graphql": "^14.0.2",
+		"graphql-import": "^0.7.1",
+		"husky": "^1.1.2",
+		"jest": "^23.6.0",
+		"lint-staged": "^7.3.0",
+		"prettier": "^1.14.3"
+	},
+	"lint-staged": {
+		"*.{js,css,md}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"dependencies": {
+		"graphql-tools": "^4.0.2"
+	}
 }
