@@ -9,8 +9,8 @@
 		"format": "prettier --write \"**/*.{js,css,md}\"",
 		"posttest": "npm run format",
 		"precommit": "lint-staged",
-		"test:jest": "jest --coverage",
-		"test:watch": "jest --coverage --watch",
+		"test:jest": "jest",
+		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
 		"test": "npm run test:jest"
 	},
@@ -25,6 +25,9 @@
 		"jest": "^23.6.0",
 		"lint-staged": "^7.3.0",
 		"prettier": "^1.14.3"
+	},
+	"jest": {
+		"collectCoverage": true
 	},
 	"lint-staged": {
 		"*.{js,css,md}": [
